@@ -25,10 +25,42 @@
                                             {{ csrf_field() }}
 
                                         <div class="form-group">
-                                            <label>Product Name:</label>
-                                            <input type="text" name="product_name" class="form-control" placeholder="Enter Product Name">
+                                            <label>Contact Name:</label>
+                                            <input type="text" name="product_name" class="form-control" placeholder="Enter Contact Name">
                                         </div>
                            
+
+                                        <div class="form-group">
+                                            <label>Company:</label>
+                                            <input type="text" name="product_name" class="form-control" placeholder="Enter Company Name">
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <label>Designation:</label>
+                                            <input type="text" name="product_name" class="form-control" placeholder="Enter Designation">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Phone Number:</label>
+                                            <input type="text" name="product_name" class="form-control" placeholder="Enter Phone Number">
+                                        </div>
+
+
+         
+
+                                                                                <div class="form-group">
+                                            <label>Email:</label>
+                                            <input type="text" name="product_name" class="form-control" placeholder="Enter Email">
+                                        </div>
+
+                                                                       <div class="form-group">
+                                            <label>Address:</label>
+                                            <input type="text" name="product_name" class="form-control" placeholder="Enter Address">
+                                        </div>
+                                        
+                                        
                                         <button type="submit" class="btn btn-success">Save</button>
                                         <button type="reset" class="btn btn-danger">Cancel</button>
                                     </form>

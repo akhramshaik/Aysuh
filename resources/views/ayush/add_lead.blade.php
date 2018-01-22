@@ -4,6 +4,15 @@
 
 @section('content')
 
+<style type="text/css">
+    .display_item{
+        display: none;
+    }
+
+    .hide_item{
+        display: none;
+    }
+</style>
 
         <div id="page-wrapper">
             <div class="row">
@@ -25,10 +34,68 @@
                                             {{ csrf_field() }}
 
                                         <div class="form-group">
-                                            <label>Product Name:</label>
+                                            <label>Lead Name:</label>
                                             <input type="text" name="product_name" class="form-control" placeholder="Enter Product Name">
                                         </div>
                            
+                                        <div class="form-group">
+                                            <label>Lead Status:</label>
+                                         
+                                            <select class="form-control lead_status" id="">
+                                            <option value="new">New</option>
+                                            <option value="attempting_to_call">Attempting to call </option>
+                                            <option value="interested">Interested</option>
+                                            <option value="nurture">Nurture</option>
+                                            <option value="unresponsive">Unresponsive</option>
+                                            <option value="not_valid">Not valid</option>
+                                            <option value="converted">Converted</option>
+                                            </select>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label>First Contact Date:</label>
+              <div class="input-group date" data-provide="datepicker" data-date-format="dd-mm-yyyy">
+    <input type="text" class="form-control">
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-th"></span>
+    </div>
+</div>
+                                        </div>
+
+
+
+<div class="form-group hide_item lead_item">
+<label>Lead Converted Date:</label>
+
+<div class="input-group date" data-provide="datepicker" data-date-format="dd-mm-yyyy">
+<input type="text" class="form-control">
+<div class="input-group-addon">
+<span class="glyphicon glyphicon-th"></span>
+</div>
+</div>
+</div>
+
+
+                                    <div class="form-group">
+                                            <label>Primary Contact:</label>
+                                            <input type="text" name="product_name" class="form-control" placeholder="Enter Product Name">
+                                        </div>
+
+
+<div class="form-group">
+<label>Next Followup Date:</label>
+
+<div class="input-group date" data-provide="datepicker" data-date-format="dd-mm-yyyy">
+<input type="text" class="form-control">
+<div class="input-group-addon">
+<span class="glyphicon glyphicon-th"></span>
+</div>
+</div>
+</div>
+
+
+
                                         <button type="submit" class="btn btn-success">Save</button>
                                         <button type="reset" class="btn btn-danger">Cancel</button>
                                     </form>
@@ -46,6 +113,29 @@
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+   
+    $('.datepicker').datepicker();
+
+
+ $(".lead_status").change(function(){
+        if($(this).val() =='converted'){
+ $(".lead_item").removeClass("hide_item");
+        } else{
+
+ $(".lead_item").addClass("hide_item");
+
+
+        }
+    });
+
+
+   
+});
+</script>
+
 
 @endsection
 
